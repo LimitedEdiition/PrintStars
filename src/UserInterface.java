@@ -47,6 +47,39 @@ public class UserInterface {
                 } else {
                     continue;
                 }
+            } else if(printRequest.equalsIgnoreCase("Triangle")) {
+                System.out.println("Is this a LEFT or RIGHT leaning triangle?");
+                String triangleType = scanner.nextLine();
+                if(triangleType.equalsIgnoreCase("Right")) {
+                    System.out.println("What is the height of the right leaning triangle?");
+                    int height = Integer.valueOf(scanner.nextLine());
+                    if(validInput(height)) {
+                        PrintStars.rightTriangle(height);
+                    } else {
+                        continue;
+                    }
+                } else if(triangleType.equalsIgnoreCase("Left")) {
+                    System.out.println("What is the height of the left leaning triangle?");
+                    int height = Integer.valueOf(scanner.nextLine());
+                    if(validInput(height)) {
+                        PrintStars.leftTriangle(height);
+                    } else {
+                        continue;
+                    }
+                } else {
+                    System.out.println("INVALID INPUT\n");
+                    continue;
+                }
+
+                // END
+            } else if(printRequest.equalsIgnoreCase("End")){
+                System.out.println("Thank you.");
+                break;
+
+                //INVALID INPUT
+            } else {
+                System.out.println("INVALID INPUT - TRY AGAIN\n");
+                continue;
             }
 
 

@@ -21,5 +21,27 @@ public class PrintStars {
         }
     }
 
+    public static void rightTriangle(int height) {
+        for(int i=1; i<=height; i++) {
+            printStars(i);
+            System.out.println();
+        }
+    }
+
+    public static void printSpace(int spaces) {
+        for(int i=0; i<spaces; i++) {
+            System.out.print(" ");
+        }
+    }
+
+    public static void leftTriangle(int height) {
+        for(int i=1; i<=height; i++) {
+            printSpace(height-i);
+            printStars(i);
+            System.out.println();
+        }
+    }
+
+
 
 }
