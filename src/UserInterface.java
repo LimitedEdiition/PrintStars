@@ -76,8 +76,18 @@ public class UserInterface {
                 System.out.println("Thank you.");
                 break;
 
-                //INVALID INPUT
-            } else {
+                // CHRISTMAS TREE
+            } else if(printRequest.equalsIgnoreCase("Tree")) {
+                System.out.println("What is the height of the tree? *NOTE: Must be bigger than 3!");
+                int height = Integer.valueOf(scanner.nextLine());
+                if(validInput(height)) {
+                    PrintStars.tree(height);
+                } else {
+                    System.out.println("Invalid Input");
+                    continue;
+                }
+                // INVALID INPUT
+            }else {
                 System.out.println("INVALID INPUT - TRY AGAIN\n");
                 continue;
             }

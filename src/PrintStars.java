@@ -42,6 +42,26 @@ public class PrintStars {
         }
     }
 
+    public static void tree(int height) {
+        for(int i=1;i<=height;i++) {
+            printSpace(height-i);
+            printStars(i);
+            printStars(i-1);
+            System.out.println();
+        }
+        //System.out.println();
+        baseOfTree(height);
+    }
+
+    public static void baseOfTree(int height) {
+        // Trunk is calculated by height - 2 spaces, followed by 2x3
+        for(int i=0; i<2; i++) {
+            printSpace(height-2);
+            printStars(3);
+            System.out.println();
+        }
+    }
+
 
 
 }
