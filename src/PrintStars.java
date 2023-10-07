@@ -45,8 +45,7 @@ public class PrintStars {
     public static void tree(int height) {
         for(int i=1;i<=height;i++) {
             printSpace(height-i);
-            printStars(i);
-            printStars(i-1);
+            printStars(i+i-1);
             System.out.println();
         }
         //System.out.println();
