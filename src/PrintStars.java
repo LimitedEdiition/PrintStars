@@ -9,9 +9,14 @@ public class PrintStars {
 
     public static void printSquare(int size) {
         for(int i=0; i<size;i++) {
-            for(int j=0; j<size; j++) {
-                System.out.print("*");
-            }
+            printStars(size);
+            System.out.println();
+        }
+    }
+
+    public static void printRectangle(int height, int width) {
+        for(int i=0; i<height; i++) {
+            printStars(width);
             System.out.println();
         }
     }
